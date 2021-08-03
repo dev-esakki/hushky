@@ -25,11 +25,12 @@
   },
   "scripts": {
     "test": "npm run lint && npm run jest",
-    "lint": "eslint src/. test/. --config .eslintrc.json --fix",
+    "lint": "eslint '**/*js'",
     "dev": "nodemon src/",
     "build": "NODE_ENV=development webpack --config webpack.config.js",
     "start": "NODE_ENV=development nodemon src/",
-    "jest": "jest  --forceExit"
+    "jest": "jest  --forceExit",
+    "lint:fix": "prettier-eslint '**/*.js' --write"
   },
   "standard": {
     "env": [
@@ -63,10 +64,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,css,scss,html,md}": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.js": ["npm run lint:fix", "git add"]
   },
   "devDependencies": {
     "axios": "^0.21.1",
