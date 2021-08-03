@@ -59,8 +59,12 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "lint-staged",
       "pre-push": "npm test"
     }
+  },
+  "lint-staged": {
+    "*.ts": ["tslint", "prettier --write", "git add"]
   },
   "devDependencies": {
     "axios": "^0.21.1",
