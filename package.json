@@ -64,7 +64,9 @@
     }
   },
   "lint-staged": {
-    "*.ts": ["tslint", "prettier --write", "git add"]
+    "*.{js,json,css,scss,html,md}": [
+      "prettier --write",
+      "git add"
   },
   "devDependencies": {
     "axios": "^0.21.1",
