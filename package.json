@@ -67,6 +67,7 @@
     "*.{js,json,css,scss,html,md}": [
       "prettier --write",
       "git add"
+    ]
   },
   "devDependencies": {
     "axios": "^0.21.1",
