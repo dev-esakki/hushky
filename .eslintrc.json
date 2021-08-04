@@ -23,7 +23,13 @@
     "quotes": [
       "error",
       "single"
-    ]
+    ],
+    "no-unused-vars": ["error", {
+      "args": "none",
+      "caughtErrors": "none",
+      "ignoreRestSiblings": true,
+      "vars": "all"
+    }]
     // "semi": [
     //   "error",
     //   "always"
