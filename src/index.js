@@ -10,9 +10,7 @@ process.on('unhandledRejection', (reason, p) =>
 );
 
 server.on('listening', async() => {
-  let a = "10"
     await mongooseConnection(app)
     logger.info('Feathers application started on http://%s:%d', app.get('host'), port)
-
   }
 );

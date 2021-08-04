@@ -30,7 +30,7 @@
     "build": "NODE_ENV=development webpack --config webpack.config.js",
     "start": "NODE_ENV=development nodemon src/",
     "jest": "jest  --forceExit",
-    "lint:fix": "prettier-eslint '**/*.js' --write"
+    "lint:fix": "eslint --config .eslintrc.json"
   },
   "standard": {
     "env": [
@@ -65,8 +65,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "npm run lint:fix",
-      "git add"
+      "npm run lint:fix"
     ]
   },
   "devDependencies": {
@@ -76,6 +75,7 @@
     "jest": "^27.0.6",
     "lint-staged": "^11.1.1",
     "nodemon": "^2.0.12",
+    "prettier-eslint": "^13.0.0",
     "webpack": "^5.47.1",
     "webpack-cli": "^4.7.2",
     "webpack-node-externals": "^3.0.0",
