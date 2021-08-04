@@ -11,6 +11,8 @@ process.on('unhandledRejection', (reason, p) =>
 
 server.on('listening', async() => {
     await mongooseConnection(app)
+    let a ='wewewe'
+    console.log(a)
     logger.info('Feathers application started on http://%s:%d', app.get('host'), port)
   }
 );
